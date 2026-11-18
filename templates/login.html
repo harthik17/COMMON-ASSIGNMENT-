@@ -1,0 +1,5 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sign in · Sentinel</title><link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}"></head>
+<body class="login-body"><main class="login-card"><div class="brand-mark">⌁</div><p class="eyebrow">NETWORK DEFENSE CONSOLE</p><h1>Welcome back</h1><p class="muted">Sign in to access the security monitoring system.</p>
+{% with messages=get_flashed_messages() %}{% if messages %}<div class="error">{{ messages[0] }}</div>{% endif %}{% endwith %}
+<form method="post"><label>Username</label><input name="username" required autocomplete="username" placeholder="Administrator"><label>Password</label><input name="password" type="password" required autocomplete="current-password" placeholder="Enter password"><button class="primary full">Sign in <span>→</span></button></form>
+<div class="login-hint">Demo credentials: <b>admin</b> / <b>admin123</b><br>Change the default password before deployment.</div></main></body></html>
